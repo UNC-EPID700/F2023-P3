@@ -66,6 +66,7 @@ def test_exact_output(answer_path, files, cols):
             os.remove("temp_sas.sas7bdat")
             answer_student = pd.read_sas(
                 student_paths[i], format='sas7bdat').round(DECIMAL_PLACES)
+            print(f"##########\nReading {ans} as sas7bdat\n##########")
 
         elif answer_paths[i].endswith(".csv_encrypted"):
             with open("temp.csv", 'wb') as tempfile:
@@ -74,6 +75,7 @@ def test_exact_output(answer_path, files, cols):
             os.remove("temp.csv")
             answer_student = pd.read_csv(
                 student_paths[i]).round(DECIMAL_PLACES)
+            print(f"##########\nReading {ans} as csv\n##########")
         else:
             assert False, f"Answer path {answer_paths[i]} is an invalid format. This is an autograder issue."
 
