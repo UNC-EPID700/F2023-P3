@@ -3,6 +3,6 @@ __pycache__/
 grading/encrypted/*.sas7bdat
 *.key
 .Rproj.user
-.Rproj
+*.Rproj
 
 P3.R
