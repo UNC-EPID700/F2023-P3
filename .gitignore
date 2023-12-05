@@ -1,6 +1,7 @@
 .DS_Store
 __pycache__/
 grading/encrypted/*.sas7bdat
+grading/encrypted/*.csv
 *.key
 .Rproj.user
 *.Rproj
